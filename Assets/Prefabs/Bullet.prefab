@@ -111,7 +111,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2977bfbe1a0729e4a8330cdf201b9488, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootingForce: 1500
+  shootingForce: 1700
+  shootingDirection: {x: 0, y: 0, z: 0}
+  lifetime: 3
+  explosionPrefab: {fileID: 1529584693097678, guid: b8e2f94032e29874bab4e9cad5d8c583,
+    type: 2}
 --- !u!135 &135191244406184192
 SphereCollider:
   m_ObjectHideFlags: 1
