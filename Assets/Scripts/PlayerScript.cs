@@ -14,7 +14,14 @@ public class PlayerScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetMouseButtonDown(0)){
-			Instantiate (bulletPrefab);
+			GameObject bulletObject = Instantiate (bulletPrefab);
+			BulletScript bulletScript = bulletObject.GetComponent<BulletScript> ();
+			Vector3 shootingDirection = new Vector3(
+				Random.Range(-0.15f, 0.15f),
+				Random.Range(-0.1f, 0.1f),
+				1
+			);
+			bulletScript.shootingDirection = shootingDirection.normalized;
 		}
 	}
 }
